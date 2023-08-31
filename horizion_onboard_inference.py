@@ -37,10 +37,9 @@ if __name__ == '__main__':
             stop = time.time()
             fps = round(1/(stop-start), 2)
             output0 = outputs[0].buffer
-            output1 = outputs[1].buffer
             output0 = np.squeeze(output0)
             output0 = np.expand_dims(output0, axis=0)
-            outputs = [output0, output1]
+            outputs = [output0]
             colorlist = gen_color(len(CLASSES)) 
             results = postprocess(outputs, image_4c, image_3c, conf_thres, iou_thres, classes=len(CLASSES)) ##[box,mask,shape]
             results = results[0]              ## batch=1
@@ -61,10 +60,9 @@ if __name__ == '__main__':
         stop = time.time()
         fps = round(1/(stop-start), 2)
         output0 = outputs[0].buffer
-        output1 = outputs[1].buffer
         output0 = np.squeeze(output0)
         output0 = np.expand_dims(output0, axis=0)
-        outputs = [output0, output1]
+        outputs = [output0]
         colorlist = gen_color(len(CLASSES)) 
         results = postprocess(outputs, image_4c, image_3c, conf_thres, iou_thres, classes=len(CLASSES)) ##[box,mask,shape]
         results = results[0]              ## batch=1
