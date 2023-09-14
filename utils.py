@@ -208,7 +208,7 @@ def postprocess(preds, img, orig_img, OBJ_THRESH, NMS_THRESH, classes=None):
     for i, pred in enumerate(p):
         shape = orig_img.shape
         if not len(pred):
-            results.append([[], [], []])  # save empty boxes
+            results.append([[], []])  # save empty boxes
             continue
         pred[:, :4] = scale_boxes(img.shape[2:], pred[:, :4], shape).round()
         results.append([pred[:, :6], shape[:2]])
