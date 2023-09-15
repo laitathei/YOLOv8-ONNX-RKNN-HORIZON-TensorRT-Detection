@@ -1,9 +1,9 @@
-# YOLOv8-ONNX-RKNN-Detection
+# YOLOv8-ONNX-RKNN-HORIZON-TensorRT-Detection
 ***Remark: This repo only support 1 batch size***
 
 Video source: https://www.youtube.com/watch?v=n3Dru5y3ROc&t=0s
 ```
-git clone --recursive https://github.com/laitathei/YOLOv8-ONNX-RKNN-HORIZON-Detection.git
+git clone --recursive https://github.com/laitathei/YOLOv8-ONNX-RKNN-HORIZON-TensorRT-Detection.git
 ```
 ## 0. Environment Setting
 ```
