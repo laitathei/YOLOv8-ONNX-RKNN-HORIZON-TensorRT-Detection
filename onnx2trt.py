@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
     start = time.time()
     metadata = {
-        'description': "Ultralytics YOLOv8n-seg model (untrained)",
+        'description': "Ultralytics YOLOv8n model (untrained)",
         'author': 'Ultralytics',
         'license': 'MIT License',
         'date': datetime.now().isoformat(),
