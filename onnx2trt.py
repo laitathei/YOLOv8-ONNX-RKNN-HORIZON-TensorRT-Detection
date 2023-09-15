@@ -2,7 +2,7 @@ import os, time, json
 from datetime import datetime
 import tensorrt as trt
 
-task = "segment"
+task = "detect"
 batch_size = 1
 input_width = 640
 input_height = 480
