@@ -65,7 +65,7 @@ def main():
                 vis_img = vis_result(image_3c,  results, colorlist, CLASSES, result_path)
                 cv2.imshow("vis_img", vis_img)
             else:
-                print("No segmentation result")
+                print("No Detection result")
             cv2.waitKey(10)
     else:
         image_3c = cv2.imread(image_path)
@@ -75,7 +75,6 @@ def main():
         binding_addrs['images'] = int(image_4c.data_ptr())
         context.execute_v2(list(binding_addrs.values()))
         outputs = [bindings[x].data.cpu().numpy() for x in sorted(output_names)] # put the result from gpu to cpu and convert to numpy
-        print(outputs[0])
         colorlist = gen_color(len(CLASSES)) 
         results = postprocess(outputs, image_4c, image_3c, conf_thres, iou_thres, classes=len(CLASSES)) ##[box,mask,shape]
         results = results[0]              ## batch=1
