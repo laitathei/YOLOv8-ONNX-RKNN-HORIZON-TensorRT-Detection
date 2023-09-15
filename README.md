@@ -78,6 +78,17 @@ python3 horizion_onboard_inference.py
 python3 onnxruntime_inference.py
 ```
 
+## 10. Convert ONNX model to TensorRT 
+Remember to change the variable to your setting
+```
+python3 onnx2trt.py
+```
+
+## 11. TensorRT Inference
+```
+python3 tensorrt_inference.py
+```
+
 ## Reference
 ```
 https://blog.csdn.net/magic_ll/article/details/131944207
