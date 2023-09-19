@@ -46,6 +46,7 @@ if __name__ == '__main__':
             boxes, shape = results
             if isinstance(boxes, np.ndarray):
                 vis_img = vis_result(image_3c,  results, colorlist, CLASSES, result_path)
+                cv2.imshow("vis_img", vis_img)
                 print('--> Save inference result')
             else:
                 print("No Detection result")
@@ -71,3 +72,4 @@ if __name__ == '__main__':
             print("No Detection result")
     print("RKNN inference finish")
     rknn_lite.release()
+    cv2.destroyAllWindows()
